@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D013F931CA85115008B07EA /* MUAlwaysActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D013F921CA85115008B07EA /* MUAlwaysActiveTextField.swift */; };
-		5D013F961CA85F37008B07EA /* KPCScaleToFillNSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D013F951CA85F37008B07EA /* KPCScaleToFillNSImageView.m */; };
-		5D336F8D1CA86D7D005B68BE /* MUDismissOnClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D336F8C1CA86D7D005B68BE /* MUDismissOnClickView.swift */; };
+		5D3336591CAC78D2002ED73E /* MUShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3336581CAC78D2002ED73E /* MUShowcaseViewController.swift */; };
+		5D33366C1CAC7A4B002ED73E /* KPCScaleToFillNSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3336621CAC7A4B002ED73E /* KPCScaleToFillNSImageView.m */; };
+		5D33366D1CAC7A4B002ED73E /* MUAlwaysActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3336631CAC7A4B002ED73E /* MUAlwaysActiveTextField.swift */; };
+		5D33366E1CAC7A4B002ED73E /* MUNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3336641CAC7A4B002ED73E /* MUNotificationCenter.swift */; };
+		5D33366F1CAC7A4B002ED73E /* MUNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3336661CAC7A4B002ED73E /* MUNotificationView.storyboard */; };
+		5D3336701CAC7A4B002ED73E /* MUDismissOnClickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3336681CAC7A4B002ED73E /* MUDismissOnClickView.swift */; };
+		5D3336711CAC7A4B002ED73E /* MUNotificationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3336691CAC7A4B002ED73E /* MUNotificationWindow.swift */; };
+		5D3336721CAC7A4B002ED73E /* MUNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D33366B1CAC7A4B002ED73E /* MUNotificationViewController.swift */; };
 		5D5CBD0D1C81024000F401F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CBD0C1C81024000F401F5 /* AppDelegate.swift */; };
-		5D5CBD0F1C81024000F401F5 /* MUNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CBD0E1C81024000F401F5 /* MUNotificationViewController.swift */; };
 		5D5CBD111C81024000F401F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CBD101C81024000F401F5 /* Assets.xcassets */; };
 		5D5CBD141C81024000F401F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CBD121C81024000F401F5 /* Main.storyboard */; };
 		5D5CBD1F1C81024000F401F5 /* MutsuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CBD1E1C81024000F401F5 /* MutsuTests.swift */; };
 		5D5CBD2A1C81024000F401F5 /* MutsuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CBD291C81024000F401F5 /* MutsuUITests.swift */; };
-		5D6C5BA91CA9A71500FEFBC9 /* MUNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6C5BA81CA9A71500FEFBC9 /* MUNotificationCenter.swift */; };
-		5D6C5BAE1CA9AD4900FEFBC9 /* MUNotificationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D6C5BAC1CA9AD4900FEFBC9 /* MUNotificationView.storyboard */; };
-		5DF981591CA80051000502C5 /* MUNotificationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF981581CA80051000502C5 /* MUNotificationWindow.swift */; };
-		5DFE102B1CA83CB300C1A045 /* MUShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFE102A1CA83CB300C1A045 /* MUShowcaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5D013F921CA85115008B07EA /* MUAlwaysActiveTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUAlwaysActiveTextField.swift; sourceTree = "<group>"; };
-		5D013F941CA85F37008B07EA /* KPCScaleToFillNSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCScaleToFillNSImageView.h; sourceTree = "<group>"; };
-		5D013F951CA85F37008B07EA /* KPCScaleToFillNSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCScaleToFillNSImageView.m; sourceTree = "<group>"; };
-		5D336F8C1CA86D7D005B68BE /* MUDismissOnClickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUDismissOnClickView.swift; sourceTree = "<group>"; };
+		5D3336581CAC78D2002ED73E /* MUShowcaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUShowcaseViewController.swift; sourceTree = "<group>"; };
+		5D3336611CAC7A4B002ED73E /* KPCScaleToFillNSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPCScaleToFillNSImageView.h; sourceTree = "<group>"; };
+		5D3336621CAC7A4B002ED73E /* KPCScaleToFillNSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPCScaleToFillNSImageView.m; sourceTree = "<group>"; };
+		5D3336631CAC7A4B002ED73E /* MUAlwaysActiveTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUAlwaysActiveTextField.swift; sourceTree = "<group>"; };
+		5D3336641CAC7A4B002ED73E /* MUNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUNotificationCenter.swift; sourceTree = "<group>"; };
+		5D3336661CAC7A4B002ED73E /* MUNotificationView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MUNotificationView.storyboard; sourceTree = "<group>"; };
+		5D3336681CAC7A4B002ED73E /* MUDismissOnClickView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUDismissOnClickView.swift; sourceTree = "<group>"; };
+		5D3336691CAC7A4B002ED73E /* MUNotificationWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUNotificationWindow.swift; sourceTree = "<group>"; };
+		5D33366B1CAC7A4B002ED73E /* MUNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUNotificationViewController.swift; sourceTree = "<group>"; };
 		5D5CBD091C81024000F401F5 /* Mutsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mutsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CBD0C1C81024000F401F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D5CBD0E1C81024000F401F5 /* MUNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUNotificationViewController.swift; sourceTree = "<group>"; };
 		5D5CBD101C81024000F401F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D5CBD131C81024000F401F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D5CBD151C81024000F401F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,11 +60,7 @@
 		5D5CBD251C81024000F401F5 /* MutsuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MutsuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5CBD291C81024000F401F5 /* MutsuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutsuUITests.swift; sourceTree = "<group>"; };
 		5D5CBD2B1C81024000F401F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D6C5BA81CA9A71500FEFBC9 /* MUNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUNotificationCenter.swift; sourceTree = "<group>"; };
-		5D6C5BAD1CA9AD4900FEFBC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MUNotificationView.storyboard; sourceTree = "<group>"; };
-		5DF981581CA80051000502C5 /* MUNotificationWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MUNotificationWindow.swift; sourceTree = "<group>"; };
 		5DF9815C1CA80805000502C5 /* Mutsu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mutsu-Bridging-Header.h"; sourceTree = "<group>"; };
-		5DFE102A1CA83CB300C1A045 /* MUShowcaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUShowcaseViewController.swift; path = Assets.xcassets/MUShowcaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,26 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D013F971CA85F3E008B07EA /* KPCScaleToFillNSImageView */ = {
-			isa = PBXGroup;
-			children = (
-				5D013F941CA85F37008B07EA /* KPCScaleToFillNSImageView.h */,
-				5D013F951CA85F37008B07EA /* KPCScaleToFillNSImageView.m */,
-			);
-			name = KPCScaleToFillNSImageView;
-			sourceTree = "<group>";
-		};
-		5D013F981CA869E0008B07EA /* Mutsu */ = {
-			isa = PBXGroup;
-			children = (
-				5D6C5BA81CA9A71500FEFBC9 /* MUNotificationCenter.swift */,
-				5D6C5BAF1CA9AD5500FEFBC9 /* Storyboards */,
-				5D6C5BAB1CA9ACFD00FEFBC9 /* View Controllers */,
-				5D6C5BAA1CA9ACEE00FEFBC9 /* Utilities */,
-			);
-			name = Mutsu;
-			sourceTree = "<group>";
-		};
 		5D013F991CA869EB008B07EA /* Objective C */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +107,64 @@
 		5D299F601CAC603700840DA0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5DFE102A1CA83CB300C1A045 /* MUShowcaseViewController.swift */,
+				5D3336581CAC78D2002ED73E /* MUShowcaseViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5D33365E1CAC7A4B002ED73E /* Mutsu */ = {
+			isa = PBXGroup;
+			children = (
+				5D33365F1CAC7A4B002ED73E /* Libraries */,
+				5D3336641CAC7A4B002ED73E /* MUNotificationCenter.swift */,
+				5D3336651CAC7A4B002ED73E /* Storyboards */,
+				5D3336671CAC7A4B002ED73E /* Utilities */,
+				5D33366A1CAC7A4B002ED73E /* View Controllers */,
+			);
+			path = Mutsu;
+			sourceTree = "<group>";
+		};
+		5D33365F1CAC7A4B002ED73E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5D3336601CAC7A4B002ED73E /* KPCScaleToFillNSImageView */,
+				5D3336631CAC7A4B002ED73E /* MUAlwaysActiveTextField.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		5D3336601CAC7A4B002ED73E /* KPCScaleToFillNSImageView */ = {
+			isa = PBXGroup;
+			children = (
+				5D3336611CAC7A4B002ED73E /* KPCScaleToFillNSImageView.h */,
+				5D3336621CAC7A4B002ED73E /* KPCScaleToFillNSImageView.m */,
+			);
+			path = KPCScaleToFillNSImageView;
+			sourceTree = "<group>";
+		};
+		5D3336651CAC7A4B002ED73E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5D3336661CAC7A4B002ED73E /* MUNotificationView.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5D3336671CAC7A4B002ED73E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5D3336681CAC7A4B002ED73E /* MUDismissOnClickView.swift */,
+				5D3336691CAC7A4B002ED73E /* MUNotificationWindow.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5D33366A1CAC7A4B002ED73E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D33366B1CAC7A4B002ED73E /* MUNotificationViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		5D5CBD001C81024000F401F5 = {
@@ -158,9 +193,8 @@
 				5D5CBD0C1C81024000F401F5 /* AppDelegate.swift */,
 				5D299F601CAC603700840DA0 /* View Controllers */,
 				5D013F9A1CA869F8008B07EA /* Storyboards */,
-				5D013F981CA869E0008B07EA /* Mutsu */,
+				5D33365E1CAC7A4B002ED73E /* Mutsu */,
 				5D013F991CA869EB008B07EA /* Objective C */,
-				5DF9815A1CA807DD000502C5 /* Libraries */,
 				5D5CBD101C81024000F401F5 /* Assets.xcassets */,
 				5D5CBD151C81024000F401F5 /* Info.plist */,
 			);
@@ -183,40 +217,6 @@
 				5D5CBD2B1C81024000F401F5 /* Info.plist */,
 			);
 			path = MutsuUITests;
-			sourceTree = "<group>";
-		};
-		5D6C5BAA1CA9ACEE00FEFBC9 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				5DF981581CA80051000502C5 /* MUNotificationWindow.swift */,
-				5D336F8C1CA86D7D005B68BE /* MUDismissOnClickView.swift */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-		5D6C5BAB1CA9ACFD00FEFBC9 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5D5CBD0E1C81024000F401F5 /* MUNotificationViewController.swift */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		5D6C5BAF1CA9AD5500FEFBC9 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				5D6C5BAC1CA9AD4900FEFBC9 /* MUNotificationView.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
-		5DF9815A1CA807DD000502C5 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				5D013F971CA85F3E008B07EA /* KPCScaleToFillNSImageView */,
-				5D013F921CA85115008B07EA /* MUAlwaysActiveTextField.swift */,
-			);
-			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,8 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5CBD111C81024000F401F5 /* Assets.xcassets in Resources */,
+				5D33366F1CAC7A4B002ED73E /* MUNotificationView.storyboard in Resources */,
 				5D5CBD141C81024000F401F5 /* Main.storyboard in Resources */,
-				5D6C5BAE1CA9AD4900FEFBC9 /* MUNotificationView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,14 +350,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DF981591CA80051000502C5 /* MUNotificationWindow.swift in Sources */,
-				5DFE102B1CA83CB300C1A045 /* MUShowcaseViewController.swift in Sources */,
-				5D5CBD0F1C81024000F401F5 /* MUNotificationViewController.swift in Sources */,
-				5D013F961CA85F37008B07EA /* KPCScaleToFillNSImageView.m in Sources */,
-				5D013F931CA85115008B07EA /* MUAlwaysActiveTextField.swift in Sources */,
-				5D336F8D1CA86D7D005B68BE /* MUDismissOnClickView.swift in Sources */,
+				5D3336711CAC7A4B002ED73E /* MUNotificationWindow.swift in Sources */,
+				5D3336721CAC7A4B002ED73E /* MUNotificationViewController.swift in Sources */,
+				5D33366D1CAC7A4B002ED73E /* MUAlwaysActiveTextField.swift in Sources */,
+				5D3336701CAC7A4B002ED73E /* MUDismissOnClickView.swift in Sources */,
+				5D33366E1CAC7A4B002ED73E /* MUNotificationCenter.swift in Sources */,
+				5D33366C1CAC7A4B002ED73E /* KPCScaleToFillNSImageView.m in Sources */,
+				5D3336591CAC78D2002ED73E /* MUShowcaseViewController.swift in Sources */,
 				5D5CBD0D1C81024000F401F5 /* AppDelegate.swift in Sources */,
-				5D6C5BA91CA9A71500FEFBC9 /* MUNotificationCenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,14 +399,6 @@
 				5D5CBD131C81024000F401F5 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5D6C5BAC1CA9AD4900FEFBC9 /* MUNotificationView.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D6C5BAD1CA9AD4900FEFBC9 /* Base */,
-			);
-			name = MUNotificationView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -4,6 +4,8 @@ An experimental notification framework for OSX
 <img src="https://a.pomf.cat/gsilxj.png" style="width: 100%">
 <img src="https://a.pomf.cat/iohvjg.png" style="width: 100%">
 
+This application is only for showcasing Mutsu. If you want to use it in a project, copy ``` /path/to/clone/Mutsu/Mutsu/Mutsu ``` to your project
+
 ## Features
 * Highly customizable, with sensible defaults
 * Simple to use

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
-        <plugIn identifier="com.apple.MapKitIBPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -676,9 +675,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="325"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <mapView fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L3e-Ma-xV0">
-                                <rect key="frame" x="80" y="42" width="320" height="240"/>
-                            </mapView>
                             <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="etB-fT-Nfl" userLabel="Background Visual Effect View">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="325"/>
                                 <subviews>
@@ -865,7 +861,6 @@
                         <outlet property="iconImageView" destination="icg-1h-bjS" id="knW-Wk-jAn"/>
                         <outlet property="imageImageView" destination="jL0-XT-2Ka" id="mdA-nN-kX1"/>
                         <outlet property="informativeTextTextField" destination="sOz-Uf-cWA" id="R5w-Ys-H3Y"/>
-                        <outlet property="mapView" destination="L3e-Ma-xV0" id="39p-4Q-CbY"/>
                         <outlet property="sizePopUpButton" destination="2hF-Ps-jyv" id="R7T-ZG-esW"/>
                         <outlet property="stayTimeTextField" destination="GE9-Ye-mTY" id="PuM-Ct-cIP"/>
                         <outlet property="titleTextField" destination="0Zp-jn-WqJ" id="5rQ-a4-Isx"/>

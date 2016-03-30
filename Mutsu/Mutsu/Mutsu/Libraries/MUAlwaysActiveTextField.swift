@@ -20,5 +20,4 @@ class MUAlwaysActiveTextField: NSTextField {
 
         // Drawing code here.
     }
-    
 }

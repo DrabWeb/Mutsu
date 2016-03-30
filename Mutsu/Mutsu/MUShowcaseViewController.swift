@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import MapKit
 
 class MUShowcaseViewController: NSViewController {
     
@@ -47,7 +46,6 @@ class MUShowcaseViewController: NSViewController {
         MUNotificationCenter().defaultCenter().clearNotifications();
     }
     
-    @IBOutlet var mapView: MKMapView!
     /// When we press the "Show" button...
     @IBAction func showButtonInteracted(sender: AnyObject) {
         /// The actions to display in the notification
@@ -97,8 +95,6 @@ class MUShowcaseViewController: NSViewController {
         notification.size = size;
         notification.imageSizeView = nil;
         notification.stayTime = CGFloat(stayTimeTextField.floatValue);
-        
-        notification.imageSizeView = mapView;
         
         // Display the notification
         MUNotificationCenter().defaultCenter().deliverNotification(notification);
