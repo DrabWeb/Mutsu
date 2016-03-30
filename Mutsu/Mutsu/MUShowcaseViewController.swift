@@ -54,11 +54,10 @@ class MUShowcaseViewController: NSViewController {
         // If we said to include the example actions...
         if(Bool(exampleActionsCheckbox.state)) {
             /// The first example button for the notification
-            let ignoreButton : MUNotificationButton = MUNotificationButton(title: "Ignore", target: self, action: Selector(""));
-            ignoreButton.actionIsClose = true;
+            let ignoreButton : MUNotificationButton = MUNotificationButton(title: "Ignore", target: self, action: Selector("exampleAction"), dismissOnClick: true);
             
             /// The second example button for the notification
-            let callButton : MUNotificationButton = MUNotificationButton(title: "Call", target: self, action: Selector(""));
+            let callButton : MUNotificationButton = MUNotificationButton(title: "Call", target: self, action: Selector("exampleAction"), dismissOnClick: true);
             
             // Set the actions to "Ignore" and "Call"
             actions = [ignoreButton, callButton];
@@ -98,6 +97,12 @@ class MUShowcaseViewController: NSViewController {
         
         // Display the notification
         MUNotificationCenter().defaultCenter().deliverNotification(notification);
+    }
+    
+    /// The example action for the notification's example actions to call
+    func exampleAction() {
+        // Print to the log
+        print("Clicked action");
     }
     
     override func viewDidLoad() {

@@ -120,13 +120,13 @@ class MUNotificationViewController: NSViewController {
                 }
                 // If this action is a MUNotificationButton...
                 else if((currentAction as? MUNotificationButton) != nil) {
-                    // If teh button should dismiss the notification on click...
-                    if((currentAction as! MUNotificationButton).actionIsClose) {
-                        // Set the target of the button
-                        (currentAction as! MUNotificationButton).target = self;
+                    // If the button should dismiss the notification on click...
+                    if((currentAction as! MUNotificationButton).dismissOnClick) {
+                        // Set the dismiss target of the button
+                        (currentAction as! MUNotificationButton).dismissTarget = self;
                         
-                        // Set the action to dismiss this notification
-                        (currentAction as! MUNotificationButton).action = Selector("dismiss");
+                        // Set the dismiss action to dismiss this notification
+                        (currentAction as! MUNotificationButton).dismissAction = Selector("dismiss");
                     }
                 }
                 

@@ -37,8 +37,8 @@ class MUNotificationCenter: NSObject {
     /// The regular height of the image notification(Default 300)
     let imageHeight : CGFloat = 300;
     
-    /// Delivers the given notification
-    func deliverNotification(notification : MUNotification) {
+    /// Delivers the given notification, returns the displayed MUNotificationViewController
+    func deliverNotification(notification : MUNotification) -> MUNotificationViewController {
         // Print to the log that we are delivering a notification
         print("Delivering notification...");
         
@@ -63,6 +63,9 @@ class MUNotificationCenter: NSObject {
         
         // Show the notification
         notificationViewController.showNotification(notification);
+        
+        // Return the notification view controller
+        return notificationViewController;
     }
     
     /// Clears all the on screen notifications
@@ -232,16 +235,23 @@ class MUNotification {
 
 /// A nice default style for notification buttons
 class MUNotificationButton : NSButton {
-    /// Should this button's action dismiss the notification?(Pretty redundant because you can just click the header of the notification, but whatever)
-    var actionIsClose : Bool = false;
+    /// Should the notification hide when this button is pressed?
+    var dismissOnClick : Bool = true;
+    
+    /// The target for the dismiss action
+    var dismissTarget : AnyObject? = nil;
+    
+    /// The selector for the dismiss action
+    var dismissAction : Selector? = nil;
     
     // Init with a title, target and action
-    init(title : String, target: AnyObject, action : Selector) {
+    init(title : String, target: AnyObject, action : Selector, dismissOnClick : Bool) {
         super.init(frame: NSRect.zero);
         
         self.title = title;
         self.target = target;
         self.action = action;
+        self.dismissOnClick = dismissOnClick;
         
         // Disable the border
         bordered = false;
@@ -249,6 +259,19 @@ class MUNotificationButton : NSButton {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder);
+    }
+    
+    override func sendAction(theAction: Selector, to theTarget: AnyObject?) -> Bool {
+        // Perform the button's action
+        target!.performSelector(action);
+        
+        // If the dismiss target and action are set...
+        if(dismissTarget != nil && dismissAction != nil) {
+            // Perform the dismiss selector
+            dismissTarget!.performSelector(dismissAction!);
+        }
+        
+        return true;
     }
 }
 
