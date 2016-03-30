@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <scenes>
+        <!--Notification Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController storyboardIdentifier="MUNotificationWindowController" id="B8D-0N-5wS" userLabel="Notification Window Controller" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="documentWindow" id="IQv-IB-iLA" customClass="MUNotificationWindow" customModule="Mutsu" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" ignoresCycle="YES" fullScreenAuxiliary="YES" fullScreenDisallowsTiling="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="1331" y="941" width="324" height="63"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="450"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="MUNotificationViewController" customModule="Mutsu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="324" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <visualEffectView wantsLayer="YES" appearanceType="vibrantDark" blendingMode="behindWindow" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="6Zi-MQ-1Cz" userLabel="Background Visual Effect View">
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="300"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="xYc-gO-hOm" userLabel="Notification">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="300"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="4N6-N8-azI" userLabel="Image Size Content">
+                                                <rect key="frame" x="0.0" y="0.0" width="324" height="300"/>
+                                                <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DbF-LN-k7G" userLabel="Image View" customClass="KPCScaleToFillNSImageView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="300"/>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Example Cover" id="C1l-NL-tej"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </customView>
+                                            <visualEffectView blendingMode="withinWindow" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="nIR-Jm-I0C" userLabel="Bottom Bar Visual Effect View">
+                                                <rect key="frame" x="0.0" y="0.0" width="324" height="39"/>
+                                                <subviews>
+                                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" spacing="0.0" horizontalStackHuggingPriority="250" verticalStackHuggingPriority="250" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzX-kH-rgp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="39"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="39" id="DqX-DG-ALe"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gzX-kH-rgp" secondAttribute="trailing" id="QSP-iZ-huX"/>
+                                                    <constraint firstAttribute="bottom" secondItem="gzX-kH-rgp" secondAttribute="bottom" id="bLi-vX-GeR"/>
+                                                    <constraint firstItem="gzX-kH-rgp" firstAttribute="leading" secondItem="nIR-Jm-I0C" secondAttribute="leading" id="du1-ux-R6b"/>
+                                                    <constraint firstItem="gzX-kH-rgp" firstAttribute="top" secondItem="nIR-Jm-I0C" secondAttribute="top" id="xLS-Xi-4r7"/>
+                                                </constraints>
+                                            </visualEffectView>
+                                            <visualEffectView blendingMode="withinWindow" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="ZfV-5a-JUi" userLabel="Top Bar Visual Effect View">
+                                                <rect key="frame" x="0.0" y="237" width="324" height="63"/>
+                                                <subviews>
+                                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qs3-3T-fcp" userLabel="Icon Image View">
+                                                        <rect key="frame" x="10" y="10" width="43" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qs3-3T-fcp" secondAttribute="height" multiplier="1:1" id="LE0-Nj-ePL"/>
+                                                        </constraints>
+                                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="zoS-Qs-zxe"/>
+                                                    </imageView>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="08d-kU-sHv" userLabel="Title Label">
+                                                        <rect key="frame" x="59" y="32" width="247" height="18"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" title="Title" id="PRi-b3-hOs">
+                                                            <font key="font" size="14" name=".AppleSystemUIFont"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" alphaValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-US-UiV" userLabel="Content Label">
+                                                        <rect key="frame" x="59" y="14" width="247" height="17"/>
+                                                        <textFieldCell key="cell" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" alignment="left" title="Information" id="GVj-Y8-0Yu">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="DH3-ek-oBb" userLabel="Dismiss On Click" customClass="MUDismissOnClickView" customModule="Mutsu" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="63"/>
+                                                    </customView>
+                                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="NiB-CN-xmL" userLabel="Bottom Divider">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="40d-BG-woa"/>
+                                                        </constraints>
+                                                    </customView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="qs3-3T-fcp" firstAttribute="leading" secondItem="ZfV-5a-JUi" secondAttribute="leading" constant="10" id="1Bp-qu-dCX"/>
+                                                    <constraint firstItem="qs3-3T-fcp" firstAttribute="top" secondItem="ZfV-5a-JUi" secondAttribute="top" constant="10" id="1HC-Ia-O0p"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qs3-3T-fcp" secondAttribute="bottom" constant="10" id="1WL-aO-zgz"/>
+                                                    <constraint firstItem="Xel-US-UiV" firstAttribute="top" secondItem="08d-kU-sHv" secondAttribute="bottom" constant="1" id="8dH-FM-lwb"/>
+                                                    <constraint firstItem="08d-kU-sHv" firstAttribute="top" secondItem="ZfV-5a-JUi" secondAttribute="top" constant="13" id="B5b-jc-Qqh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Xel-US-UiV" secondAttribute="bottom" constant="14" id="CgN-xu-fW2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="08d-kU-sHv" secondAttribute="trailing" constant="20" id="Dxf-nV-TTY"/>
+                                                    <constraint firstItem="Xel-US-UiV" firstAttribute="top" secondItem="08d-kU-sHv" secondAttribute="bottom" constant="1" id="IqT-LL-yO1"/>
+                                                    <constraint firstAttribute="height" constant="63" id="LR2-Kt-TQ2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="DH3-ek-oBb" secondAttribute="bottom" id="N9F-sx-eK9"/>
+                                                    <constraint firstItem="NiB-CN-xmL" firstAttribute="leading" secondItem="ZfV-5a-JUi" secondAttribute="leading" id="UoJ-7x-11l"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DH3-ek-oBb" secondAttribute="trailing" id="Xgh-ZO-bPd"/>
+                                                    <constraint firstItem="08d-kU-sHv" firstAttribute="centerY" secondItem="ZfV-5a-JUi" secondAttribute="centerY" constant="-9.5" id="YHh-yl-oS9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NiB-CN-xmL" secondAttribute="trailing" id="cB3-W9-Zwy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Xel-US-UiV" secondAttribute="trailing" constant="20" id="df3-fJ-uB2"/>
+                                                    <constraint firstItem="DH3-ek-oBb" firstAttribute="top" secondItem="ZfV-5a-JUi" secondAttribute="top" id="oaZ-E3-AOb"/>
+                                                    <constraint firstItem="Xel-US-UiV" firstAttribute="centerY" secondItem="ZfV-5a-JUi" secondAttribute="centerY" constant="9" id="pei-q7-Gai"/>
+                                                    <constraint firstItem="Xel-US-UiV" firstAttribute="leading" secondItem="qs3-3T-fcp" secondAttribute="trailing" constant="8" id="qea-Nw-mg3"/>
+                                                    <constraint firstItem="08d-kU-sHv" firstAttribute="leading" secondItem="qs3-3T-fcp" secondAttribute="trailing" constant="8" id="tdX-ZF-tbf"/>
+                                                    <constraint firstItem="DH3-ek-oBb" firstAttribute="leading" secondItem="ZfV-5a-JUi" secondAttribute="leading" id="urg-3g-T0c"/>
+                                                    <constraint firstAttribute="bottom" secondItem="NiB-CN-xmL" secondAttribute="bottom" id="ze4-tl-cv7"/>
+                                                </constraints>
+                                            </visualEffectView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nIR-Jm-I0C" firstAttribute="leading" secondItem="xYc-gO-hOm" secondAttribute="leading" id="79N-zR-OSq"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZfV-5a-JUi" secondAttribute="trailing" id="9eT-wA-d32"/>
+                                            <constraint firstItem="4N6-N8-azI" firstAttribute="top" secondItem="xYc-gO-hOm" secondAttribute="top" id="D6s-9N-Kfm"/>
+                                            <constraint firstItem="ZfV-5a-JUi" firstAttribute="top" secondItem="xYc-gO-hOm" secondAttribute="top" id="Ori-sK-wC9"/>
+                                            <constraint firstItem="ZfV-5a-JUi" firstAttribute="leading" secondItem="xYc-gO-hOm" secondAttribute="leading" id="UbS-ef-Lwu"/>
+                                            <constraint firstItem="4N6-N8-azI" firstAttribute="leading" secondItem="xYc-gO-hOm" secondAttribute="leading" id="V4F-QS-deN"/>
+                                            <constraint firstAttribute="trailing" secondItem="4N6-N8-azI" secondAttribute="trailing" id="VBA-jC-Voe"/>
+                                            <constraint firstAttribute="bottom" secondItem="nIR-Jm-I0C" secondAttribute="bottom" id="Vrj-9B-zgR"/>
+                                            <constraint firstAttribute="trailing" secondItem="nIR-Jm-I0C" secondAttribute="trailing" id="d5U-BR-EsW"/>
+                                            <constraint firstAttribute="bottom" secondItem="4N6-N8-azI" secondAttribute="bottom" id="r1m-GM-awB"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xYc-gO-hOm" firstAttribute="leading" secondItem="6Zi-MQ-1Cz" secondAttribute="leading" id="0cX-ns-UYq"/>
+                                    <constraint firstAttribute="bottom" secondItem="xYc-gO-hOm" secondAttribute="bottom" id="6Qk-8l-E7Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="xYc-gO-hOm" secondAttribute="trailing" id="OlG-Dw-25B"/>
+                                    <constraint firstItem="xYc-gO-hOm" firstAttribute="top" secondItem="6Zi-MQ-1Cz" secondAttribute="top" id="Rs1-Wn-TNm"/>
+                                </constraints>
+                            </visualEffectView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Zi-MQ-1Cz" secondAttribute="trailing" id="U75-wf-iBE"/>
+                            <constraint firstItem="6Zi-MQ-1Cz" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ba6-Xt-8Gg"/>
+                            <constraint firstAttribute="bottom" secondItem="6Zi-MQ-1Cz" secondAttribute="bottom" id="db8-nC-CMC"/>
+                            <constraint firstItem="6Zi-MQ-1Cz" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="hQW-pn-Dqd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionsStackView" destination="gzX-kH-rgp" id="52q-Lm-qb5"/>
+                        <outlet property="backgroundVisualEffectView" destination="6Zi-MQ-1Cz" id="ywK-cF-TJD"/>
+                        <outlet property="bottomBarVisualEffectView" destination="nIR-Jm-I0C" id="Cu2-Mr-eCS"/>
+                        <outlet property="iconImageView" destination="qs3-3T-fcp" id="zVX-cc-SDQ"/>
+                        <outlet property="imageSizeNotificationView" destination="4N6-N8-azI" id="nTi-iB-ixR"/>
+                        <outlet property="imageView" destination="DbF-LN-k7G" id="T4Z-8X-BPC"/>
+                        <outlet property="informativeTextLabel" destination="Xel-US-UiV" id="DxN-1E-MIS"/>
+                        <outlet property="titleLabel" destination="08d-kU-sHv" id="JUC-Lc-m8V"/>
+                        <outlet property="topBarBottomDivider" destination="NiB-CN-xmL" id="ZcL-Ac-TdT"/>
+                        <outlet property="topBarCloseNotificationView" destination="DH3-ek-oBb" id="Rdj-bX-s2e"/>
+                        <outlet property="topBarVisualEffectView" destination="ZfV-5a-JUi" id="a39-5r-MPg"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="762"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Example Cover" width="275.59054565429688" height="275.59054565429688"/>
+        <image name="NSApplicationIcon" width="128" height="128"/>
+    </resources>
+</document>
