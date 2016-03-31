@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import MapKit
+import WebKit
 
 class MUShowcaseViewController: NSViewController {
     
@@ -48,6 +50,9 @@ class MUShowcaseViewController: NSViewController {
     
     /// When we press the "Show" button...
     @IBAction func showButtonInteracted(sender: AnyObject) {
+        /// The notification to show
+        let notification : MUNotification = MUNotification();
+        
         /// The actions to display in the notification
         var actions : [NSView] = [];
         
@@ -80,9 +85,31 @@ class MUShowcaseViewController: NSViewController {
             // Set the size to Image
             size = .Image;
         }
-        
-        /// The notification so show
-        let notification : MUNotification = MUNotification();
+        // If we selected the Map example...
+        else if(sizePopUpButton.selectedItem!.title == "Map") {
+            // Set the size to Image
+            size = .Image;
+            
+            // Set the custom view to a Map
+            notification.imageSizeView = MKMapView();
+            
+            // Set the map type to satellite flyover
+            (notification.imageSizeView as! MKMapView).mapType = MKMapType.SatelliteFlyover;
+        }
+        // If we selected the Web View example...
+        else if(sizePopUpButton.selectedItem!.title == "Web View") {
+            // Set the size to Image
+            size = .Image;
+            
+            // Set the custom view to a WebKit WebView
+            notification.imageSizeView = WebView();
+            
+            // Load Google
+            (notification.imageSizeView as! WebView).mainFrame.loadRequest(NSURLRequest(URL: NSURL(string: "https://maps.google.com/")!));
+            
+            // Set the appearance to Aqua(WebViews dont work well with vibrancy)
+            notification.imageSizeView?.appearance = NSAppearance(named: NSAppearanceNameAqua);
+        }
         
         // Set the notification's values
         notification.title = titleTextField.stringValue;
@@ -92,7 +119,6 @@ class MUShowcaseViewController: NSViewController {
         notification.actions = actions;
         notification.style = style;
         notification.size = size;
-        notification.imageSizeView = nil;
         notification.stayTime = CGFloat(stayTimeTextField.floatValue);
         
         // Display the notification

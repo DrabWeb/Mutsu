@@ -777,13 +777,15 @@
                                             <constraint firstAttribute="height" constant="21" id="ReQ-5w-YCF"/>
                                             <constraint firstAttribute="width" constant="200" id="plp-vN-k5Z"/>
                                         </constraints>
-                                        <popUpButtonCell key="cell" type="push" title="Banner" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" focusRingType="exterior" imageScaling="proportionallyDown" inset="2" selectedItem="B64-dG-Rha" id="iZM-XQ-Lx3">
+                                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" focusRingType="exterior" imageScaling="proportionallyDown" inset="2" id="iZM-XQ-Lx3">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="rIc-DR-zyb">
                                                 <items>
                                                     <menuItem title="Banner" state="on" id="B64-dG-Rha"/>
                                                     <menuItem title="Image" id="wxC-C4-jRV"/>
+                                                    <menuItem title="Map" id="JJT-oA-3y2"/>
+                                                    <menuItem title="Web View" id="qli-2f-V2j"/>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
