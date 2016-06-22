@@ -3,7 +3,6 @@
 //  Mutsu
 //
 //  Created by Seth on 2016-03-27.
-//  Copyright © 2016 DrabWeb. All rights reserved.
 //
 
 import Cocoa
@@ -120,6 +119,8 @@ class MUShowcaseViewController: NSViewController {
         notification.style = style;
         notification.size = size;
         notification.stayTime = CGFloat(stayTimeTextField.floatValue);
+        
+        notification.imageSizeViewFullSize = false;
         
         // Display the notification
         MUNotificationCenter().defaultCenter().deliverNotification(notification);

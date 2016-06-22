@@ -3,7 +3,6 @@
 //  Mutsu
 //
 //  Created by Seth on 2016-03-28.
-//  Copyright © 2016 DrabWeb. All rights reserved.
 //
 
 import Cocoa
@@ -210,6 +209,9 @@ class MUNotification {
     
     /// The custom view to use if the notification is image sized(Optional)
     var imageSizeView : NSView? = nil;
+    
+    /// Should the imageSizeView be the full height of the notification(And under the top banner and bottom actions)?
+    var imageSizeViewFullSize : Bool = true;
     
     /// The Selector to perform when the notification is closed(Optional)
     var closeAction : Selector? = nil;

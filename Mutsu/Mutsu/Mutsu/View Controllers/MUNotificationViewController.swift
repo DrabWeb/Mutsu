@@ -3,7 +3,6 @@
 //  Mutsu
 //
 //  Created by Seth on 2016-02-26.
-//  Copyright © 2016 DrabWeb. All rights reserved.
 //
 
 import Cocoa
@@ -30,6 +29,12 @@ class MUNotificationViewController: NSViewController {
     
     /// The container for the view when the notification is image size
     @IBOutlet var imageSizeNotificationView: NSView!
+    
+    /// The top constraint for imageSizeNotificationView
+    @IBOutlet var imageSizeNotificationViewTopConstraint: NSLayoutConstraint!
+    
+    /// The bottom constraint for imageSizeNotificationView
+    @IBOutlet var imageSizeNotificationViewBottomConstraint: NSLayoutConstraint!
     
     /// The image view for the icon of the notification
     @IBOutlet var iconImageView: NSImageView!
@@ -190,6 +195,38 @@ class MUNotificationViewController: NSViewController {
             bottomBarVisualEffectView.hidden = true;
         }
         
+        // If we said to have the image size notification view be full size...
+        if(notification.imageSizeViewFullSize) {
+            // Restore the constraints for the image size view container
+            imageSizeNotificationViewTopConstraint.constant = 0;
+            imageSizeNotificationViewBottomConstraint.constant = 0;
+            
+            // Set the top bar to be vibrant within the window
+            topBarVisualEffectView.blendingMode = .WithinWindow;
+            
+            // Set the bottom bar to be vibrant within the window
+            bottomBarVisualEffectView.blendingMode = .WithinWindow;
+        }
+            // If we said to have the image size view not full size...
+        else {
+            // Set the constraints for the image size view container
+            imageSizeNotificationViewTopConstraint.constant = 63;
+            
+            // If there are any actions...
+            if(!notification.actions.isEmpty) {
+                imageSizeNotificationViewBottomConstraint.constant = MUNotificationCenter().defaultCenter().bottomBarHeight;
+            }
+            else {
+                imageSizeNotificationViewBottomConstraint.constant = 0;
+            }
+            
+            // Set the top bar to be vibrant behind the window
+            topBarVisualEffectView.blendingMode = .BehindWindow;
+            
+            // Set the bottom bar to be vibrant behind the window
+            bottomBarVisualEffectView.blendingMode = .BehindWindow;
+        }
+        
         // If the notification size is Image...
         if(notification.size == .Image) {
             // Set the height to the image notification height
@@ -241,12 +278,6 @@ class MUNotificationViewController: NSViewController {
             
             // Hide the top bar bottom divider
             topBarBottomDivider.hidden = true;
-            
-            // Set the top bar to be vibrant within the window
-            topBarVisualEffectView.blendingMode = .WithinWindow;
-            
-            // Set the bottom bar to be vibrant within the window
-            bottomBarVisualEffectView.blendingMode = .WithinWindow;
             
             // Set the resize time
             window.resizeTime = MUNotificationCenter().defaultCenter().imageAnimateSpeed;
